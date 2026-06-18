@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProPhotoSkills Photoguide OnLocation – Professionelles Produktionssystem für mobile Fotografie</title>
+<meta name="description" content="Photoguide OnLocation: das Produktionssystem für mobile Kreativproduktionen – TRAVEL, LOCATION, INSURANCE und EQUIPMENT als geschlossenes System.">
+<link rel="canonical" href="https://onlocation.prophotoskills.com/">
+<style>
+/* ===================== HEADER ===================== */
+.pps-site-header {
+  background: #F8E800;
+  padding: 14px 0;
+}
+.pps-site-header .wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.pps-site-header .logo img { height: 36px; display: block; }
+.pps-site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+}
+.pps-site-header nav a {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0A1211;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pps-site-header nav a:hover { text-decoration: underline; }
+.pps-site-header .login-btn { display: flex; align-items: center; }
+.pps-site-header .login-btn img { height: 20px; width: 20px; display: block; }
+.pps-site-header .flags { display: flex; align-items: center; gap: 5px; }
+.pps-site-header .flags img { height: 14px; width: 20px; display: block; border-radius: 2px; }
+@media (max-width: 900px) {
+  .pps-site-header nav { display: none; }
+}
+
+/* ===================== FOOTER ===================== */
+.pps-site-footer {
+  background: #3C3D41;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  padding: 56px 0 0;
+}
+.pps-site-footer .wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+.pps-site-footer .footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.3fr 1.3fr 1.3fr;
+  gap: 32px;
+}
+.pps-site-footer .footer-grid img { height: 28px; margin-bottom: 14px; }
+.pps-site-footer .tagline { color: #ff6b6b; font-size: 14px; margin: 0 0 10px; }
+.pps-site-footer .email a { color: #fff; font-size: 12px; text-decoration: none; }
+.pps-site-footer h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: #fff;
+}
+.pps-site-footer .links { display: flex; flex-direction: column; gap: 9px; }
+.pps-site-footer .links a { color: #fff; font-size: 13.5px; text-decoration: none; opacity: 0.92; }
+.pps-site-footer .links a:hover { text-decoration: underline; }
+.pps-site-footer .system-links a { font-weight: 700; }
+.pps-site-footer .social { display: flex; gap: 10px; margin-top: 6px; }
+.pps-site-footer .social a {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+.pps-site-footer .copyright {
+  margin-top: 44px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  text-align: center;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.75);
+}
+.pps-site-footer .copyright em { font-style: italic; }
+@media (max-width: 900px) {
+  .pps-site-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .pps-site-footer .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<!-- ===================== HEADER MARKUP ===================== -->
+<header class="pps-site-header">
+  <div class="wrap">
+    <a class="logo" href="https://prophotoskills.com/">
+      <img src="https://prophotoskills.github.io/pps-assets/images/ProPhotoSkills_Logo.png" alt="Pro Photo Skills">
+    </a>
+    <nav>
+      <a class="login-btn" href="https://prophotoskills.com/login-web/" aria-label="Login">
+        <img src="https://prophotoskills.github.io/pps-assets/images/login_website.png" alt="">
+      </a>
+      <a href="https://prophotoskills.com/login-web/">LogIn</a>
+      <a href="https://prophotoskills.com/knowledge/">KNOWLEDGE</a>
+      <a href="https://prophotoskills.com/technik/">TECHNIK</a>
+      <a href="https://prophotoskills.com/progress/">PROGRESS</a>
+      <a href="https://prophotoskills.com/skill/">SKILL</a>
+      <a href="https://prophotoskills.com/psycho/">PSYCHO</a>
+      <a href="https://prophotoskills.com/travel/">TRAVEL</a>
+      <a href="https://prophotoskills.com/location/">LOCATION</a>
+      <a href="https://prophotoskills.com/insurance/">INSURANCE</a>
+      <a href="https://prophotoskills.com/equipment/">EQUIPMENT</a>
+      <span class="flags">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/en.svg" alt="EN">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/de.svg" alt="DE">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/fr.svg" alt="FR">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/es.svg" alt="ES">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/pt.svg" alt="PT">
+        <img src="https://prophotoskills.com/wp-content/plugins/gtranslate/flags/svg/it.svg" alt="IT">
+      </span>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ============================================================
+     ProPhotoSkills · Photoguide OnLocation — VERSION 7
+     Oberes Buch im Hero entfernt (war doppelt, da das Cover jetzt im System-
+     Abschnitt steht). Hero zeigt nur noch den zentrierten Textblock
+     (Eyebrow, Headline, Lead, CTA). Unbenutzte hero-row/hero-cover-CSS entfernt.
+     Vorgängerversionen: onlocation-code-modul.html, -v2 bis -v6 (bleiben erhalten)
+     Code-Modul-Inhalt ohne Header/Footer (für WPCode / Divi Code-Modul)
+     Farben: offizielle PPS-Palette · Schrift: Inter durchgängig
+     Wrapper-Klasse "pps-ol" kapselt alle Styles, kollidiert nicht mit Theme
+     ============================================================ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.pps-ol {
+  /* --- offizielle PPS-Farben --- */
+  --bg: #F9F9F9;          /* Grau Webseite Hintergrund */
+  --bg-card: #FFFFFF;
+  --ink: #0A1211;          /* Schwarz */
+  --ink-dim: #3C3D41;       /* Footer-Grau, hier als gedämpfte Textfarbe */
+  --accent: #D73C1C;       /* Photoguide Rot */
+  --accent-soft: rgba(215,60,28,0.08);
+  --yellow: #F8E800;       /* PPS Gelb */
+  --dot: #E8E8E8;          /* Grau gepunktet 1 */
+  --dot-strong: #DBDBDB;   /* Grau gepunktet 2 */
+
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: var(--bg) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.pps-ol * { box-sizing: border-box; }
+.pps-ol a { color: inherit; text-decoration: none; }
+.pps-ol img { max-width: 100%; display: block; }
+.pps-ol .wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+.pps-ol h1, .pps-ol h2, .pps-ol h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.pps-ol .eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pps-ol section { padding: 36px 0; background: var(--bg); }
+.pps-ol section + section { border-top: 1px dotted var(--dot-strong); }
+
+/* ---------- HERO ---------- */
+.pps-ol .hero-top {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.pps-ol .hero h1 {
+  font-size: clamp(32px, 4.2vw, 50px);
+  line-height: 1.12;
+  margin-top: 14px;
+  width: 100%;
+}
+.pps-ol .hero h1 em { color: var(--accent); font-style: normal; }
+.pps-ol .hero .lead {
+  margin: 18px auto 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--ink-dim);
+  max-width: 56ch;
+}
+.pps-ol .hero .lead strong { color: var(--ink); font-weight: 700; }
+.pps-ol .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 15px 28px;
+  background: var(--accent);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pps-ol .cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(215,60,28,0.40); }
+.pps-ol .cta-meta { margin-top: 12px; font-size: 13px; color: var(--ink-dim); }
+
+/* ---------- SYSTEM / SPINE ---------- */
+.pps-ol .system-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.pps-ol .system-cover {
+  aspect-ratio: 300/415;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 30px 50px -22px rgba(10,18,17,0.18);
+  border: 1px solid var(--dot-strong);
+  background-color: #fff;
+  background-image: var(--cover-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.pps-ol .system-cover .sr-img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.pps-ol .system h2 { font-size: clamp(26px, 3vw, 36px); margin-top: 10px; }
+.pps-ol .system .intro {
+  margin-top: 18px;
+  max-width: 64ch;
+  color: var(--ink-dim);
+  font-size: 16px;
+}
+.pps-ol .spine { margin-top: 24px; position: relative; padding-left: 44px; }
+.pps-ol .spine::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom,
+    #46257B 0%,  #46257B 22%,
+    #A43CA0 25%, #A43CA0 47%,
+    #6FBD9A 50%, #6FBD9A 72%,
+    #A08000 75%, #A08000 100%);
+}
+.pps-ol .module { position: relative; padding: 0 0 26px 28px; }
+.pps-ol .module:last-child { padding-bottom: 0; }
+.pps-ol .module::before {
+  content: attr(data-n);
+  position: absolute;
+  left: -44px;
+  top: -2px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--mcolor, var(--accent));
+  color: var(--mcolor, var(--accent));
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pps-ol .module h3 { font-size: 19px; font-weight: 800; display: inline; }
+.pps-ol .module h3 a {
+  color: var(--mcolor, var(--accent));
+  border-bottom: 2px solid var(--mcolor, var(--accent));
+  padding-bottom: 1px;
+}
+.pps-ol .module p {
+  margin: 8px 0 0;
+  color: var(--ink-dim);
+  font-size: 15.5px;
+  max-width: 66ch;
+}
+.pps-ol .system-close {
+  margin-top: 24px;
+  padding-left: 44px;
+  color: var(--ink-dim);
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* ---------- CROSS-SELL ---------- */
+.pps-ol .crosssell h2 { font-size: clamp(22px, 2.6vw, 30px); }
+.pps-ol .crosssell .intro-line {
+  margin-top: 14px;
+  font-size: 15.5px;
+  color: var(--ink-dim);
+}
+.pps-ol .cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.pps-ol .card { display: block; cursor: pointer; background: var(--bg-card);
+  border: 1px dotted var(--dot-strong);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 30px 50px -22px rgba(10,18,17,0.18);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pps-ol .card:hover {
+  border-color: var(--accent);
+  border-style: solid;
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px -16px rgba(10,18,17,0.28);
+}
+.pps-ol .card img { width: 100%; aspect-ratio: 300/415; object-fit: contain; background: #fff; pointer-events: none; }
+.pps-ol .card-label { padding: 14px 16px 18px; font-size: 14px; font-weight: 700; }
+.pps-ol .card-label span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 12.5px;
+  color: var(--ink-dim);
+}
+.pps-ol .card.is-current .card-label span { color: var(--accent); font-weight: 600; }
+
+/* ---------- FAQ ---------- */
+.pps-ol .faq-head { max-width: 64ch; }
+.pps-ol .faq h2 { font-size: clamp(26px, 3vw, 36px); }
+.pps-ol .faq .desc { margin-top: 10px; color: var(--ink-dim); font-size: 15px; }
+.pps-ol .faq-list { margin-top: 18px; border-top: 1px dotted var(--dot-strong); }
+.pps-ol .faq-item { border-bottom: 1px dotted var(--dot-strong); }
+.pps-ol .faq-q {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.pps-ol .faq-q:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.pps-ol .faq-icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+.pps-ol .faq-item[data-open="true"] .faq-icon { transform: rotate(45deg); }
+.pps-ol .faq-a { overflow: hidden; max-height: 0; transition: max-height 0.25s ease; }
+.pps-ol .faq-item[data-open="true"] .faq-a { max-height: 260px; }
+.pps-ol .faq-a-inner { padding: 0 0 22px; color: var(--ink-dim); font-size: 15px; max-width: 66ch; }
+.pps-ol .faq-a-inner a { color: var(--accent); border-bottom: 1px solid var(--accent); }
+.pps-ol .price-badge {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-left: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) { .pps-ol * { transition: none !important; } }
+
+@media (max-width: 880px) {
+  .pps-ol .system-row { grid-template-columns: 1fr; text-align: center; }
+  .pps-ol .system-cover { max-width: 220px; margin: 0 auto; }
+  .pps-ol .cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .pps-ol section { padding: 24px 0; }
+  .pps-ol .wrap { padding: 0 20px; }
+  .pps-ol .cards { grid-template-columns: 1fr; }
+  .pps-ol .spine, .pps-ol .system-close { padding-left: 32px; }
+  .pps-ol .module { padding-left: 24px; }
+  .pps-ol .module::before { left: -32px; }
+}
+</style>
+
+<div class="pps-ol" style="background:#F9F9F9;">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div class="eyebrow">Photoguide · Produktionssystem für mobile Fotografie</div>
+        <h1>ProPhotoSkills Photoguide <em>OnLocation</em></h1>
+        <p class="lead">
+          Steht für professionelle Fotografie außerhalb des Studios –
+          <strong>strategische Planung, sichere Umsetzung und wirtschaftlich durchdachte Produktion</strong>
+          – auf über A5 / 250 Seiten mit vielen Beispielen und Tipps.
+        </p>
+        <a class="cta" href="https://www.digistore24.com/product/652061">Ebook · 120 € · EPUB / PDF · A5</a>
+        <div class="cta-meta">Sofortiger Zugriff nach Kauf · Digistore24 Käuferschutz</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM -->
+  <section class="system">
+    <div class="wrap">
+      <div class="system-row">
+        <div class="system-cover" role="img" aria-label="Photoguide On Location von ProPhotoSkills – Guide für Outdoor Fotografie, Reisen, Planung und professionelle Shootings vor Ort" style="--cover-img: url('https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_OL.webp');">
+          <img class="sr-img"
+            src="https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_OL.webp"
+            alt="Photoguide On Location von ProPhotoSkills – Guide für Outdoor Fotografie, Reisen, Planung und professionelle Shootings vor Ort"
+            loading="lazy" width="300" height="415">
+        </div>
+        <div class="system-text">
+          <div class="eyebrow">Das System</div>
+          <h2>Professionell fotografieren außerhalb des Studios</h2>
+          <p class="intro">
+            <em>On Location</em> ist mehr als Reisefotografie. Es ist die Fähigkeit, Produktionen
+            sicher, effizient und strategisch außerhalb des Studios umzusetzen. Wer professionell
+            fotografiert, weiß: Logistik, Planung und Risikomanagement sind keine Nebenthemen – sie
+            sind Grundlage für kreative Freiheit. Dieses Buch verbindet die vier entscheidenden
+            Bereiche für professionelle On-Location-Fotografie: TRAVEL, LOCATION, INSURANCE und
+            EQUIPMENT.
+          </p>
+        </div>
+      </div>
+
+      <div class="spine">
+        <div class="module" data-n="01" style="--mcolor:#46257B;">
+          <h3><a href="https://prophotoskills.com/travel/">TRAVEL</a></h3>
+          <p>Im Bereich TRAVEL geht es um Reiseplanung, Produktionslogistik und
+            Teamorganisation. Zeitpuffer, Dokumente, Zollbestimmungen und Energie-Management
+            entscheiden oft über Erfolg oder Chaos.</p>
+        </div>
+        <div class="module" data-n="02" style="--mcolor:#A43CA0;">
+          <h3><a href="https://prophotoskills.com/location/">LOCATION</a></h3>
+          <p>LOCATION zeigt, wie Orte nicht nur Kulisse, sondern aktiver Bestandteil deiner
+            Bildsprache werden. Licht, Struktur, Atmosphäre und Kontext beeinflussen Bildwirkung
+            stärker als Technik allein.</p>
+        </div>
+        <div class="module" data-n="03" style="--mcolor:#6FBD9A;">
+          <h3><a href="https://prophotoskills.com/insurance/">INSURANCE</a></h3>
+          <p>INSURANCE steht nicht nur für klassische Versicherungen, sondern für
+            Risikobewusstsein. Gefahren erkennen, einschätzen und absichern – bevor sie zur
+            kreativen Bremse werden.</p>
+        </div>
+        <div class="module" data-n="04" style="--mcolor:#A08000;">
+          <h3><a href="https://prophotoskills.com/equipment/">EQUIPMENT</a></h3>
+          <p>EQUIPMENT behandelt strategische Investitionsentscheidungen. Kaufen oder mieten?
+            Minimal oder maximal? Wirtschaftliches Denken ist Teil professioneller Fotografie.</p>
+        </div>
+      </div>
+
+      <p class="system-close">On Location richtet sich an Fotografen, die außerhalb des Studios arbeiten und ihre Produktionen auf ein professionelles Niveau heben wollen. Es verbindet Planung, Verantwortung und kreative Umsetzung zu einem strukturierten System.</p>
+    </div>
+  </section>
+
+  <!-- CROSS-SELL -->
+  <section class="crosssell">
+    <div class="wrap">
+      <div class="eyebrow">Weitere Optionen</div>
+      <h2>Hier weitere Option</h2>
+      <p class="intro-line">Das ProPhotoSkills System im Überblick – Next Level, OnLocation selbst, MemberAbo und der kostenlose Beginner Guide.</p>
+      <div class="cards">
+        <a class="card" href="https://nextlevel.prophotoskills.com/">
+          <img src="https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_NL.webp" alt="Photoguide Next Level von ProPhotoSkills als Buch – strategischer Guide für professionelle Fotografie, Bildwirkung und Set-Führung" loading="lazy">
+          <div class="card-label">Photoguide Next Level<span>Das Wissenssystem · 230 €</span></div>
+        </a>
+        <a class="card is-current" href="https://onlocation.prophotoskills.com/">
+          <img src="https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_OL.webp" alt="Photoguide On Location von ProPhotoSkills als Buch Mockup – Guide für Outdoor Fotografie, Reisen, Planung und professionelle Shootings vor Ort" loading="lazy">
+          <div class="card-label">Photoguide OnLocation<span>Du befindest dich hier · 120 €</span></div>
+        </a>
+        <a class="card" href="https://memberabo.prophotoskills.com/">
+          <img src="https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_MB.webp" alt="ProPhotoSkills Membership Bereich als Zugang zu exklusiven Fotografie-Inhalten, Guides und professionellem Wissen für Fotograf:innen" loading="lazy">
+          <div class="card-label">MemberAbo<span>Voller Systemzugang · 300 € / 6 Monate</span></div>
+        </a>
+        <a class="card" href="https://prophotoskills.com/pps_photoguide_beginner/">
+          <img src="https://prophotoskills.github.io/pps-assets/images/PPS_BookCover_300x415_BG.webp" alt="Kostenloser Photoguide für Einsteiger von ProPhotoSkills mit Fokus auf Fotografie Grundlagen" loading="lazy">
+          <div class="card-label">Photoguide Beginner<span>Einstieg in die Grundlagen · kostenlos</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <div class="faq-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Häufige Fragen zu Photoguide OnLocation</h2>
+        <p class="desc">Das professionelle Produktionssystem für mobile Kreativproduktionen – Travel, Location, Insurance und Equipment kompakt erklärt.</p>
+      </div>
+
+      <div class="faq-list" id="pps-ol-faq">
+        <div class="faq-item" data-open="true">
+          <button class="faq-q" aria-expanded="true">Was ist Photoguide OnLocation?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Photoguide OnLocation ist kein klassisches Reise- oder Technikbuch, sondern ein professionelles Produktionssystem für Fotografen – für mobile Kreativproduktionen unter wechselnden realen Bedingungen.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Für wen ist Photoguide OnLocation geeignet?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Für professionelle Fotografen die mobil arbeiten, auf Reisen produzieren oder unter wechselnden Bedingungen konsistente Qualität liefern wollen.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Was unterscheidet OnLocation von Next Level?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Next Level ist das umfassende Wissenssystem für Denken, Psychologie, Business und Skill. OnLocation ist das spezialisierte System für mobile Produktionen – Travel, Location, Insurance und Equipment.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Warum ist Reiseplanung für Fotografen so wichtig?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Weil Logistik entscheidet, ob du ruhig, fokussiert und kreativ arbeiten kannst. Schlechte Planung kostet Energie – gute Planung schützt Kreativität.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Wie wichtig ist die richtige Location?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Eine Location beeinflusst Licht, Raumwirkung und Stimmung – oft stärker als die Kamera selbst. Räume erzählen Geschichten bevor Menschen sprechen.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Warum ist Absicherung Teil professioneller Fotografie?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Sicherheit ermöglicht kreative Freiheit und klare Entscheidungen – technisch, rechtlich und organisatorisch. Wer abgesichert ist, kann sich auf das Bild konzentrieren.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Macht besseres Equipment bessere Fotos?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Nein. Equipment verstärkt dein Können – es ersetzt es nicht. Die Strategie hinter dem Equipment entscheidet mehr als das Gerät selbst.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Was bedeutet Travel als Produktionskontrolle?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Travel ist nicht nur Logistik – es ist der Schutz deiner kreativen Energie. Wer Reisen professionell plant, kommt ausgeruht, vorbereitet und fokussiert ans Set.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Wie viele Module hat Photoguide OnLocation?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Vier Module: TRAVEL, LOCATION, INSURANCE und EQUIPMENT – als geschlossenes System für mobile Kreativproduktionen.</div></div>
+        </div>
+        <div class="faq-item" data-open="false">
+          <button class="faq-q" aria-expanded="false">Was kostet Photoguide OnLocation?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">120 EUR<span class="price-badge">120 €</span>. Erhältlich über <a href="https://www.digistore24.com/product/652061">Digistore24</a>.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  var items = document.querySelectorAll('#pps-ol-faq .faq-item');
+  items.forEach(function (item) {
+    var btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', function () {
+      var isOpen = item.getAttribute('data-open') === 'true';
+      items.forEach(function (i) {
+        i.setAttribute('data-open', 'false');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.setAttribute('data-open', 'true');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Photoguide OnLocation ist kein klassisches Reise- oder Technikbuch, sondern ein professionelles Produktionssystem für Fotografen – für mobile Kreativproduktionen unter wechselnden realen Bedingungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Für wen ist Photoguide OnLocation geeignet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für professionelle Fotografen die mobil arbeiten, auf Reisen produzieren oder unter wechselnden Bedingungen konsistente Qualität liefern wollen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was unterscheidet OnLocation von Next Level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Next Level ist das umfassende Wissenssystem für Denken, Psychologie, Business und Skill. OnLocation ist das spezialisierte System für mobile Produktionen – Travel, Location, Insurance und Equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum ist Reiseplanung für Fotografen so wichtig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil Logistik entscheidet, ob du ruhig, fokussiert und kreativ arbeiten kannst. Schlechte Planung kostet Energie – gute Planung schützt Kreativität."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie wichtig ist die richtige Location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Location beeinflusst Licht, Raumwirkung und Stimmung – oft stärker als die Kamera selbst. Räume erzählen Geschichten bevor Menschen sprechen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum ist Absicherung Teil professioneller Fotografie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sicherheit ermöglicht kreative Freiheit und klare Entscheidungen – technisch, rechtlich und organisatorisch. Wer abgesichert ist, kann sich auf das Bild konzentrieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Macht besseres Equipment bessere Fotos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Equipment verstärkt dein Können – es ersetzt es nicht. Die Strategie hinter dem Equipment entscheidet mehr als das Gerät selbst."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet Travel als Produktionskontrolle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel ist nicht nur Logistik – es ist der Schutz deiner kreativen Energie. Wer Reisen professionell plant, kommt ausgeruht, vorbereitet und fokussiert ans Set."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Module hat Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vier Module: TRAVEL, LOCATION, INSURANCE und EQUIPMENT – als geschlossenes System für mobile Kreativproduktionen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "120 EUR. Erhältlich über Digistore24 (https://www.digistore24.com/product/652061)."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ===================== FOOTER MARKUP ===================== -->
+<footer class="pps-site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="https://prophotoskills.github.io/pps-assets/images/LogoProPS_Footer.png" alt="Pro Photo Skills">
+        <p class="tagline">Your journey as a professional starts here …</p>
+        <p class="email"><a href="mailto:support@prophotoskills.com">support@prophotoskills.com</a></p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/ProPhotoSkills" aria-label="Facebook">FB</a>
+          <a href="https://www.tiktok.com/@prophotoskills.com" aria-label="TikTok">TT</a>
+          <a href="https://www.instagram.com/pro.photo.skills/" aria-label="Instagram">IG</a>
+          <a href="https://es.pinterest.com/prophotoskills/" aria-label="Pinterest">PT</a>
+        </div>
+      </div>
+      <div>
+        <h4>ProPhotoSkills</h4>
+        <div class="links">
+          <a href="https://prophotoskills.com/impressum">Impressum DE</a>
+          <a href="https://prophotoskills.com/datenschutz">Datenschutz DE</a>
+          <a href="https://prophotoskills.com/about_us">About Us</a>
+          <a href="https://prophotoskills.com/pps_faq">PPS FAQs</a>
+        </div>
+      </div>
+      <div>
+        <h4>ProPhotoSkills Products</h4>
+        <div class="links">
+          <a href="https://prophotoskills.com/pps-system/">PPS System</a>
+          <a href="https://nextlevel.prophotoskills.com/">PPS Photoguide NextLevel</a>
+          <a href="https://prophotoskills.com/pps_photoguide_beginner/">PPS Photoguide Beginner</a>
+          <a href="https://onlocation.prophotoskills.com/">PPS Photoguide OnLocation</a>
+          <a href="https://memberabo.prophotoskills.com/">PPS MemberAbo</a>
+          <a href="https://prophotoskills.com/pps_shop/">PPS Shop</a>
+          <a href="https://prophotoskills.com/1st-assistant_program/">PPS 1st Assistant</a>
+          <a href="https://prophotoskills.com/pps_guidelines/">PPS Guidelines</a>
+          <a href="https://prophotoskills.com/affiliate/">PPS Affiliate</a>
+        </div>
+      </div>
+      <div>
+        <h4>PPS System</h4>
+        <div class="links system-links">
+          <a href="https://prophotoskills.com/knowledge/" style="color:#c08c7e;">KNOWLEDGE</a>
+          <a href="https://prophotoskills.com/technik/" style="color:#6fd4ec;">TECHNIK</a>
+          <a href="https://prophotoskills.com/progress/" style="color:#b9dd7e;">PROGRESS</a>
+          <a href="https://prophotoskills.com/skill/" style="color:#f29699;">SKILL</a>
+          <a href="https://prophotoskills.com/psycho/" style="color:#f5bd95;">PSYCHO</a>
+          <a href="https://prophotoskills.com/travel/" style="color:#a99bc4;">TRAVEL</a>
+          <a href="https://prophotoskills.com/location/" style="color:#cd83ca;">LOCATION</a>
+          <a href="https://prophotoskills.com/insurance/" style="color:#9bd7c0;">INSURANCE</a>
+          <a href="https://prophotoskills.com/equipment/" style="color:#d4ad4d;">EQUIPMENT</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">All Rights Reserved ©2026 - Pro Photo Skills - <em>Recherche-Assistenz: KI | Redaktion &amp; Haltung: Eric P.</em></div>
+  </div>
+</footer>
+
+</body>
+</html>
