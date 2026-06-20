@@ -1,0 +1,219 @@
+[
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+
+    {
+      "@type": "Question",
+      "name": "Was ist Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Photoguide OnLocation ist kein klassisches Reise- oder Technikbuch, sondern ein professionelles Produktionssystem fuer Fotografen – fuer mobile Kreativproduktionen unter wechselnden realen Bedingungen."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Fuer wen ist Photoguide OnLocation geeignet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fuer professionelle Fotografen die mobil arbeiten, auf Reisen produzieren oder unter wechselnden Bedingungen konsistente Qualitaet liefern wollen."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Was unterscheidet OnLocation von Next Level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Next Level ist das umfassende Wissenssystem fuer Denken, Psychologie, Business und Skill. OnLocation ist das spezialisierte System fuer mobile Produktionen – Travel, Location, Insurance und Equipment."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Warum ist Reiseplanung fuer Fotografen so wichtig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil Logistik entscheidet, ob du ruhig, fokussiert und kreativ arbeiten kannst. Schlechte Planung kostet Energie – gute Planung schuetzt Kreativitaet."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Wie wichtig ist die richtige Location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Location beeinflusst Licht, Raumwirkung und Stimmung – oft staerker als die Kamera selbst. Raeume erzaehlen Geschichten bevor Menschen sprechen."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Warum ist Absicherung Teil professioneller Fotografie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sicherheit ermoeglichkt kreative Freiheit und klare Entscheidungen – technisch, rechtlich und organisatorisch. Wer abgesichert ist, kann sich auf das Bild konzentrieren."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Macht besseres Equipment bessere Fotos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Equipment verstaerkt dein Koennen – es ersetzt es nicht. Die Strategie hinter dem Equipment entscheidet mehr als das Geraet selbst."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Was bedeutet Travel als Produktionskontrolle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel ist nicht nur Logistik – es ist der Schutz deiner kreativen Energie. Wer Reisen professionell plant, kommt ausgeruht, vorbereitet und fokussiert ans Set."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Wie viele Module hat Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vier Module: TRAVEL, LOCATION, INSURANCE und EQUIPMENT – als geschlossenes System fuer mobile Kreativproduktionen."
+      }
+    },
+
+    {
+      "@type": "Question",
+      "name": "Was kostet Photoguide OnLocation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "120 EUR. Erhaeltlich ueber Digistore24: https://www.digistore24.com/product/652061"
+      }
+    }
+
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://onlocation.prophotoskills.com/#website",
+      "url": "https://onlocation.prophotoskills.com",
+      "name": "Photoguide – OnLocation",
+      "description": "Professionelles OnLocation Produktionssystem fuer Fotografen. Travel, Location, Insurance, Equipment als geschlossenes System fuer mobile Kreativproduktionen.",
+      "inLanguage": "de",
+      "publisher": {
+        "@id": "https://prophotoskills.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://onlocation.prophotoskills.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://prophotoskills.com/#organization",
+      "name": "ProPhotoSkills",
+      "url": "https://prophotoskills.com",
+      "description": "Deutschsprachige Plattform fuer professionelle Fotografie-Weiterbildung im DACH-Raum.",
+      "founder": {
+        "@type": "Person",
+        "name": "Eric P.",
+        "url": "https://prophotoskills.com/about_us"
+      },
+      "sameAs": [
+        "https://www.facebook.com/ProPhotoSkills",
+        "https://www.instagram.com/pro.photo.skills/",
+        "https://www.tiktok.com/@prophotoskills.com",
+        "https://es.pinterest.com/prophotoskills/"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://onlocation.prophotoskills.com/#book",
+      "name": "Photoguide OnLocation",
+      "author": {
+        "@type": "Person",
+        "name": "Eric P."
+      },
+      "publisher": {
+        "@id": "https://prophotoskills.com/#organization"
+      },
+      "inLanguage": "de",
+      "url": "https://onlocation.prophotoskills.com/",
+      "description": "Professionelle Kreativitaet unter wechselnden realen Bedingungen – Travel, Location, Insurance, Equipment.",
+      "genre": "Photography",
+      "about": [
+        "Travel Photography",
+        "OnLocation Production",
+        "Professional Photography",
+        "Location Scouting",
+        "Equipment Management"
+      ],
+      "hasPart": [
+        {
+          "@type": "Course",
+          "name": "TRAVEL",
+          "url": "https://prophotoskills.com/travel/",
+          "description": "Reisen, Logistik, mobile Produktionen"
+        },
+        {
+          "@type": "Course",
+          "name": "LOCATION",
+          "url": "https://prophotoskills.com/location/",
+          "description": "Raeume, Atmosphaere, visuelle Wirkung"
+        },
+        {
+          "@type": "Course",
+          "name": "INSURANCE",
+          "url": "https://prophotoskills.com/insurance/",
+          "description": "Sicherheit, Verantwortung, Risikomanagement"
+        },
+        {
+          "@type": "Course",
+          "name": "EQUIPMENT",
+          "url": "https://prophotoskills.com/equipment/",
+          "description": "Werkzeugstrategie statt Gear-Fixierung"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://onlocation.prophotoskills.com/#webpage",
+      "url": "https://onlocation.prophotoskills.com/",
+      "name": "Photoguide – OnLocation | Professionelle Kreativitaet unterwegs",
+      "isPartOf": {
+        "@id": "https://onlocation.prophotoskills.com/#website"
+      },
+      "about": {
+        "@id": "https://onlocation.prophotoskills.com/#book"
+      },
+      "description": "OnLocation bedeutet professionelle Kreativitaet unter wechselnden realen Bedingungen. Das System fuer Travel, Location, Insurance und Equipment.",
+      "inLanguage": "de",
+      "dateModified": "2026-06-10"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ProPhotoSkills",
+          "item": "https://prophotoskills.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Photoguide OnLocation",
+          "item": "https://onlocation.prophotoskills.com"
+        }
+      ]
+    }
+  ]
+}
+]

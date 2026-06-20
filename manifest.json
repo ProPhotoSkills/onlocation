@@ -1,0 +1,34 @@
+{
+  "name": "Photoguide – OnLocation",
+  "short_name": "OnLocation",
+  "description": "Professionelle Kreativitaet unter wechselnden realen Bedingungen. Travel, Location, Insurance, Equipment.",
+  "start_url": "https://onlocation.prophotoskills.com/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1F3864",
+  "lang": "de",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://onlocation.prophotoskills.com/wp-content/uploads/2026/05/PPS_BookCover_4000x3200_OL-scaled-1.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "categories": [
+    "education",
+    "photography",
+    "productivity"
+  ],
+  "keywords": [
+    "OnLocation Fotografie",
+    "Travel Fotografie",
+    "Produktionssicherheit",
+    "Location Scouting",
+    "Professionelle Fotografie",
+    "ProPhotoSkills"
+  ]
+}
