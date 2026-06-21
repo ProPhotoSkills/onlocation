@@ -10,23 +10,104 @@
 <!-- ═Pinterrest ═════ -->
 <meta name="p:domain_verify" content="cd05523b1ec88d255178e3802c59df98"/>
 
-<!-- ═ GTranslate Spracherkennung ═════ -->
+<!-- ═ PPS Sprachsystem: Spracherkennung + Flag-Switcher ═════ -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  var ORIGINAL = "de";
-  var supported = ["de","en","fr","es","pt","el","ja"];
-  function detectLang() {
-    var browserLang = navigator.language || "en";
-    return browserLang.toLowerCase().split("-")[0];
+var PPS_ORIGINAL = "de";
+var PPS_SUPPORTED = ["de","en","fr","es","pt","it"];
+var PPS_COOKIE_DOMAIN = ".prophotoskills.com"; // gilt für alle Subdomains (nextlevel/onlocation/memberabo/root)
+
+function ppsGetCookie(name) {
+  var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+  return match ? decodeURIComponent(match[2]) : null;
+}
+
+function ppsSetLanguage(lang) {
+  if (lang === PPS_ORIGINAL) {
+    // Zurück zu Deutsch = Original-Sprache, Cookie löschen
+    document.cookie = "googtrans=; path=/; domain=" + PPS_COOKIE_DOMAIN + "; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    document.cookie = "googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    localStorage.setItem("pps_lang", "de");
+    location.reload();
+    return;
   }
-  var lang = detectLang();
-  if (!supported.includes(lang)) lang = "en";
-  if (lang === ORIGINAL) return;
-  // GTranslate-kompatible Speicherung
-  document.cookie = "googtrans=/auto/" + lang + "; path=/";
-  localStorage.setItem("googtrans", "/auto/" + lang);
+  document.cookie = "googtrans=/de/" + lang + "; path=/; domain=" + PPS_COOKIE_DOMAIN;
+  localStorage.setItem("pps_lang", lang);
+  ppsApplyTranslation(lang);
+  ppsUpdateActiveFlag(lang);
+}
+
+function ppsApplyTranslation(lang) {
+  var tries = 0;
+  var interval = setInterval(function () {
+    var combo = document.querySelector("select.goog-te-combo");
+    if (combo) {
+      combo.value = lang;
+      combo.dispatchEvent(new Event("change"));
+      clearInterval(interval);
+    }
+    if (++tries > 40) clearInterval(interval); // ~10s Timeout, falls Widget nicht lädt
+  }, 250);
+}
+
+function ppsUpdateActiveFlag(lang) {
+  document.querySelectorAll(".flags .flag-btn").forEach(function (btn) {
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+  });
+}
+
+function ppsToggleNav() {
+  var nav = document.querySelector(".pps-site-header nav");
+  var btn = document.querySelector(".pps-site-header .nav-toggle");
+  var isOpen = nav.classList.toggle("open");
+  btn.classList.toggle("open", isOpen);
+  btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  btn.setAttribute("aria-label", isOpen ? "Menü schließen" : "Menü öffnen");
+}
+
+document.addEventListener("click", function (e) {
+  var nav = document.querySelector(".pps-site-header nav");
+  var btn = document.querySelector(".pps-site-header .nav-toggle");
+  if (!nav.classList.contains("open")) return;
+  if (nav.contains(e.target) || btn.contains(e.target)) return;
+  nav.classList.remove("open");
+  btn.classList.remove("open");
+  btn.setAttribute("aria-expanded", "false");
+  btn.setAttribute("aria-label", "Menü öffnen");
 });
+
+function ppsDetectLang() {
+  var stored = localStorage.getItem("pps_lang") || ppsGetCookie("googtrans");
+  if (stored) {
+    var m = stored.match(/\/([a-z]{2})$/);
+    if (m && PPS_SUPPORTED.includes(m[1])) return m[1];
+    if (PPS_SUPPORTED.includes(stored)) return stored;
+  }
+  var browserLang = (navigator.language || "en").toLowerCase().split("-")[0];
+  return PPS_SUPPORTED.includes(browserLang) ? browserLang : "en";
+}
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "de",
+    includedLanguages: PPS_SUPPORTED.join(","),
+    autoDisplay: false
+  }, "google_translate_element");
+
+  var lang = ppsDetectLang();
+  ppsUpdateActiveFlag(lang);
+  if (lang !== PPS_ORIGINAL) {
+    ppsApplyTranslation(lang);
+  }
+}
 </script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+<style>
+/* Google-Translate-Bedienelemente ausblenden, eigenes Flag-UI bleibt sichtbar */
+#google_translate_element { display: none !important; }
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0 !important; }
+.goog-te-gadget-icon { display: none !important; }
+</style>
 
 <!-- ═ ai einstieg ═════ -->
 <link rel="alternate" type="text/plain" href="https://onlocation.prophotoskills.com/llms.txt" title="">
@@ -58,21 +139,23 @@ document.addEventListener("DOMContentLoaded", function() {
   margin: 0 auto;
   padding: 0 28px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: clamp(10px, 2vw, 24px);
+  flex-wrap: nowrap;
 }
+.pps-site-header .logo { flex-shrink: 0; }
 .pps-site-header .logo img { height: 36px; display: block; }
 .pps-site-header nav {
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: clamp(8px, 1.3vw, 18px);
+  flex-wrap: nowrap;
   font-family: 'Inter', sans-serif;
+  min-width: 0;
 }
 .pps-site-header nav a {
-  font-size: 13px;
+  font-size: clamp(11px, 0.95vw, 13px);
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #0A1211;
@@ -80,19 +163,80 @@ document.addEventListener("DOMContentLoaded", function() {
   white-space: nowrap;
 }
 .pps-site-header nav a:hover { text-decoration: underline; }
-.pps-site-header .login-btn { display: flex; align-items: center; }
+.pps-site-header .login-btn { display: flex; align-items: center; flex-shrink: 0; }
 .pps-site-header .login-btn img { height: 20px; width: 20px; display: block; }
+.pps-site-header .nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+.pps-site-header .nav-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #0A1211;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.pps-site-header .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.pps-site-header .nav-toggle.open span:nth-child(2) { opacity: 0; }
+.pps-site-header .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 .pps-site-header .flags {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: auto;
   flex-shrink: 0;
 }
 .pps-site-header .flags img { height: 14px; width: 20px; display: block; border-radius: 2px; }
-@media (max-width: 900px) {
-  .pps-site-header nav { display: none; }
-  .pps-site-header .flags { margin-left: auto; }
+.pps-site-header .flags .flag-btn {
+  background: none;
+  border: none;
+  padding: 2px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 0;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+}
+.pps-site-header .flags .flag-btn:hover { opacity: 0.85; }
+.pps-site-header .flags .flag-btn.active {
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--accent, #1F3864);
+}
+.pps-site-header .flags .flag-btn:focus-visible {
+  outline: 2px solid var(--accent, #1F3864);
+  outline-offset: 1px;
+}
+@media (max-width: 980px) {
+  .pps-site-header .wrap { position: relative; flex-wrap: wrap; }
+  .pps-site-header .nav-toggle { display: flex; order: 2; }
+  .pps-site-header .flags { order: 3; margin-left: auto; }
+  .pps-site-header nav {
+    display: none;
+    order: 4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #F8E800;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 28px 24px;
+    gap: 14px;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.14);
+    z-index: 50;
+  }
+  .pps-site-header nav.open { display: flex; }
+  .pps-site-header nav a { font-size: 14px; }
 }
 
 /* ===================== FOOTER ===================== */
@@ -151,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </style>
 </head>
 <body>
+<div id="google_translate_element"></div>
 <!-- ===================== HEADER MARKUP ===================== -->
 <header class="pps-site-header">
   <div class="wrap">
@@ -171,13 +316,28 @@ document.addEventListener("DOMContentLoaded", function() {
       <a href="https://prophotoskills.com/insurance/">INSURANCE</a>
       <a href="https://prophotoskills.com/equipment/">EQUIPMENT</a>
     </nav>
+    <button type="button" class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" onclick="ppsToggleNav()">
+      <span></span><span></span><span></span>
+    </button>
     <span class="flags" aria-label="Sprachen">
-      <img src="https://prophotoskills.github.io/pps-assets/images/en.svg" alt="EN" width="20" height="14">
-      <img src="https://prophotoskills.github.io/pps-assets/images/de.svg" alt="DE" width="20" height="14">
-      <img src="https://prophotoskills.github.io/pps-assets/images/fr.svg" alt="FR" width="20" height="14">
-      <img src="https://prophotoskills.github.io/pps-assets/images/es.svg" alt="ES" width="20" height="14">
-      <img src="https://prophotoskills.github.io/pps-assets/images/pt.svg" alt="PT" width="20" height="14">
-      <img src="https://prophotoskills.github.io/pps-assets/images/it.svg" alt="IT" width="20" height="14">
+      <button type="button" class="flag-btn" data-lang="en" onclick="ppsSetLanguage('en')" aria-label="English">
+        <img src="https://prophotoskills.github.io/pps-assets/images/en.svg" alt="EN" width="20" height="14">
+      </button>
+      <button type="button" class="flag-btn" data-lang="de" onclick="ppsSetLanguage('de')" aria-label="Deutsch">
+        <img src="https://prophotoskills.github.io/pps-assets/images/de.svg" alt="DE" width="20" height="14">
+      </button>
+      <button type="button" class="flag-btn" data-lang="fr" onclick="ppsSetLanguage('fr')" aria-label="Français">
+        <img src="https://prophotoskills.github.io/pps-assets/images/fr.svg" alt="FR" width="20" height="14">
+      </button>
+      <button type="button" class="flag-btn" data-lang="es" onclick="ppsSetLanguage('es')" aria-label="Español">
+        <img src="https://prophotoskills.github.io/pps-assets/images/es.svg" alt="ES" width="20" height="14">
+      </button>
+      <button type="button" class="flag-btn" data-lang="pt" onclick="ppsSetLanguage('pt')" aria-label="Português">
+        <img src="https://prophotoskills.github.io/pps-assets/images/pt.svg" alt="PT" width="20" height="14">
+      </button>
+      <button type="button" class="flag-btn" data-lang="it" onclick="ppsSetLanguage('it')" aria-label="Italiano">
+        <img src="https://prophotoskills.github.io/pps-assets/images/it.svg" alt="IT" width="20" height="14">
+      </button>
     </span>
   </div>
 </header>
