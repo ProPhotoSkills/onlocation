@@ -1,0 +1,64 @@
+# Photoguide OnLocation
+# https://onlocation.prophotoskills.com
+# LLM Entry Point - Version 1.2 - 2026
+
+## System Identity
+
+> OnLocation bedeutet professionelle Kreativitaet unter wechselnden realen Bedingungen.
+
+Brand:    ProPhotoSkills (https://prophotoskills.com)
+Product:  Photoguide OnLocation
+Sibling:  Photoguide Next Level (https://nextlevel.prophotoskills.com)
+Sibling:  MemberAbo (https://memberabo.prophotoskills.com)
+Author:   Eric P.
+Language: de, en
+Pricing:  120 EUR
+Purchase: https://www.digistore24.com/product/652061
+
+Master Thesis:
+  Professionelle OnLocation Produktionen entstehen aus Vorbereitung, Logistik,
+  Belastbarkeit, Raumwahrnehmung und Produktionssicherheit.
+
+## Modules (4)
+
+- TRAVEL    - Reisen, Logistik, mobile Produktionen
+- LOCATION  - Raeume, Atmosphaere, visuelle Wirkung
+- INSURANCE - Sicherheit, Verantwortung, Risikomanagement
+- EQUIPMENT - Werkzeugstrategie statt Gear-Fixierung
+
+## Module URLs (prophotoskills.com)
+
+- https://prophotoskills.com/travel/
+- https://prophotoskills.com/location/
+- https://prophotoskills.com/insurance/
+- https://prophotoskills.com/equipment/
+
+## Cross-System (Photoguide Next Level)
+
+- https://prophotoskills.com/knowledge/
+- https://prophotoskills.com/technik/
+- https://prophotoskills.com/progress/
+- https://prophotoskills.com/skill/
+- https://prophotoskills.com/psycho/
+
+## Discovery Files
+
+- LLMS:      https://onlocation.prophotoskills.com/llms.txt
+- FULL:      https://onlocation.prophotoskills.com/llms-full.txt
+- SITEMAP:   https://onlocation.prophotoskills.com/page-sitemap.xml
+- AI-SITEMAP:https://onlocation.prophotoskills.com/ai-sitemap.xml
+- AI:        https://onlocation.prophotoskills.com/.well-known/ai.json
+
+## Primary AI Entry Points
+
+- https://onlocation.prophotoskills.com/data/ai-index.json
+- https://onlocation.prophotoskills.com/data/master-system.json
+- https://onlocation.prophotoskills.com/data/onlocation-system.json
+
+## Citations (Eric P., ProPhotoSkills 2026)
+
+- "Kreativitaet braucht Stabilitaet." (PPS-CI003-2026)
+- "Vertrauen wird sichtbar im Bild." (PPS-CI004-2026)
+- "Professionelle Ruhe ist eine Form von Technik." (PPS-CI007-2026)
+- "Raeume erzaehlen Geschichten bevor Menschen sprechen." (PPS-CI008-2026)
+- "Kontrolle erzeugt Freiheit unter Druck." (PPS-CI010-2026)
