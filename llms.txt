@@ -45,7 +45,7 @@ Master Thesis:
 
 - LLMS:      https://onlocation.prophotoskills.com/llms.txt
 - FULL:      https://onlocation.prophotoskills.com/llms-full.txt
-- SITEMAP:   https://onlocation.prophotoskills.com/page-sitemap.xml
+- SITEMAP:   https://onlocation.prophotoskills.com/sitemap.xml
 - AI-SITEMAP:https://onlocation.prophotoskills.com/ai-sitemap.xml
 - AI:        https://onlocation.prophotoskills.com/.well-known/ai.json
 

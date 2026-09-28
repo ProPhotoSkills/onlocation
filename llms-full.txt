@@ -144,11 +144,11 @@ WEITERE PRODUKTE IM PROPHOTOSKILLS SYSTEM
 Photoguide OnLocation  : https://onlocation.prophotoskills.com/           | dieses Produkt
 Photoguide Next Level  : https://nextlevel.prophotoskills.com/
 MemberAbo              : https://memberabo.prophotoskills.com/
-PPS System             : https://prophotoskills.com/pps-system/
-Photoguide Beginner    : https://prophotoskills.com/pps_photoguide_beginner/
-PPS Shop               : https://prophotoskills.com/pps_shop/
+PPS System             : https://prophotoskills.com/system/
+Photoguide Beginner    : https://prophotoskills.com/photoguide_beginner/
+PPS Shop               : https://prophotoskills.com/shop/
 1st Assistant          : https://prophotoskills.com/1st-assistant_program/
-PPS Guidelines         : https://prophotoskills.com/pps_guidelines/
+PPS Guidelines         : https://prophotoskills.com/guidelines/
 PPS Affiliate          : https://prophotoskills.com/affiliate/
 
 ==========================
@@ -392,7 +392,7 @@ AI Identity:
 https://onlocation.prophotoskills.com/.well-known/ai.json
 
 Sitemap:
-https://onlocation.prophotoskills.com/page-sitemap.xml
+https://onlocation.prophotoskills.com/sitemap.xml
 https://onlocation.prophotoskills.com/ai-sitemap.xml
 
 ==========================
@@ -556,7 +556,7 @@ Impressum (EN)   : https://prophotoskills.com/site-notice
 Datenschutz (DE) : https://prophotoskills.com/datenschutz
 Datenschutz (EN) : https://prophotoskills.com/privacy-policy
 About            : https://prophotoskills.com/about_us
-Guidelines       : https://prophotoskills.com/pps_guidelines/
+Guidelines       : https://prophotoskills.com/guidelines/
 
 ==========================
 NUTZUNGSHINWEIS
