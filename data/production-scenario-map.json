@@ -1,32 +1,35 @@
 {
   "production_scenario_map": {
-    "system": "Photoguide – OnLocation",
-    "version": "1.0",
+    "system": "ProPhotoSkills",
     "language": "de",
+    "version": "1.2",
+    "last_updated": "2026-09-25",
+    "file_role": "Coaching-Regelwerk (KI-Coach)",
+    "usage_note": "Statisches Coaching- und Interpretationsregelwerk. Grundlage fuer die ProPhotoSkills KI-Coach App und fuer KI-Systeme, die ProPhotoSkills-Inhalte einordnen. prophotoskills.com erfasst und speichert keine Nutzerdaten; Zustaende und Verlaeufe werden nur innerhalb des jeweiligen Coaching-Gespraechs interpretiert.",
     "production_scenarios": [
       {
         "scenario_id": "PS001",
         "scenario_name": "Unerwarteter Wetterwechsel bei Outdoor Produktion",
-        "situation": "Das Wetter ändert sich plötzlich während einer laufenden OnLocation Produktion.",
+        "situation": "Das Wetter aendert sich ploetzlich waehrend einer laufenden OnLocation Produktion.",
         "primary_risks": [
           "Produktionsabbruch",
-          "Datenverlust durch Nässe",
+          "Datenverlust durch Naesse",
           "Zeitplan kollabiert",
           "Team-Stress"
         ],
         "emotional_dynamics": [
-          "Überraschung",
+          "Ueberraschung",
           "Druck",
           "Unsicherheit"
         ],
         "required_professional_skills": [
           "Vorbereitung",
-          "Flexibilität",
+          "Flexibilitaet",
           "Plan B Denken",
           "Ruhe unter Druck"
         ],
         "connected_concepts": [
-          "Anpassungsfähigkeit",
+          "Anpassungsfaehigkeit",
           "Produktionssicherheit",
           "Belastbarkeit",
           "Travel"
@@ -53,11 +56,11 @@
       },
       {
         "scenario_id": "PS002",
-        "scenario_name": "Model fühlt sich unsicher vor der Kamera",
+        "scenario_name": "Model fuehlt sich unsicher vor der Kamera",
         "situation": "Eine fotografierte Person wirkt angespannt, kontrolliert oder emotional verschlossen.",
         "primary_risks": [
           "fehlende emotionale Bildwirkung",
-          "unnatürliche Körpersprache",
+          "unnatuerliche Koerpersprache",
           "Distanz",
           "Unsicherheit"
         ],
@@ -67,24 +70,22 @@
           "Selbstbeobachtung"
         ],
         "required_professional_skills": [
-          "Menschenführung",
+          "Menschenfuehrung",
           "Kommunikation",
           "Ruhe",
-          "emotionale Präsenz"
+          "emotionale Praesenz"
         ],
         "connected_concepts": [
           "Vertrauen",
-          "Atmosphäre",
+          "Atmosphaere",
           "Emotion",
-          "Präsenz"
+          "Praesenz"
         ],
         "connected_clusters": [
           "CL003",
           "CL004"
         ],
         "recommended_articles": [
-          "T14_L01",
-          "T14_L02",
           "T11_L09"
         ],
         "recommended_learning_paths": [
@@ -95,16 +96,16 @@
           "SR002",
           "SR007"
         ],
-        "target_outcome": "Emotionale Sicherheit erzeugen und authentische Bildwirkung ermöglichen."
+        "target_outcome": "Emotionale Sicherheit erzeugen und authentische Bildwirkung ermoeglichen."
       },
       {
         "scenario_id": "PS003",
-        "scenario_name": "Zeitdruck während einer Produktion",
-        "situation": "Deadlines, knappe Zeitfenster oder organisatorische Probleme erhöhen den Druck am Set.",
+        "scenario_name": "Zeitdruck waehrend einer Produktion",
+        "situation": "Deadlines, knappe Zeitfenster oder organisatorische Probleme erhoehen den Druck am Set.",
         "primary_risks": [
           "Chaos",
           "Fehler",
-          "emotionale Instabilität",
+          "emotionale Instabilitaet",
           "Kontrollverlust"
         ],
         "emotional_dynamics": [
@@ -115,14 +116,14 @@
         "required_professional_skills": [
           "Ruhe",
           "Priorisierung",
-          "Entscheidungsfähigkeit",
+          "Entscheidungsfaehigkeit",
           "Leadership"
         ],
         "connected_concepts": [
           "Kontrolle",
           "Belastbarkeit",
           "Struktur",
-          "Führung"
+          "Fuehrung"
         ],
         "connected_clusters": [
           "CL001",
@@ -142,15 +143,15 @@
           "SR001",
           "SR006"
         ],
-        "target_outcome": "Professionelle Ruhe und Stabilität trotz Zeitdruck bewahren."
+        "target_outcome": "Professionelle Ruhe und Stabilitaet trotz Zeitdruck bewahren."
       },
       {
         "scenario_id": "PS004",
         "scenario_name": "Location funktioniert visuell nicht",
-        "situation": "Eine geplante Location erzeugt nicht die gewünschte Atmosphäre oder Bildwirkung.",
+        "situation": "Eine geplante Location erzeugt nicht die gewuenschte Atmosphaere oder Bildwirkung.",
         "primary_risks": [
           "visuelle Beliebigkeit",
-          "fehlende Atmosphäre",
+          "fehlende Atmosphaere",
           "emotionale Leere"
         ],
         "emotional_dynamics": [
@@ -161,11 +162,11 @@
         "required_professional_skills": [
           "visuelle Wahrnehmung",
           "Improvisation",
-          "Atmosphärenanalyse"
+          "Atmosphaerenanalyse"
         ],
         "connected_concepts": [
           "Raumwirkung",
-          "Atmosphäre",
+          "Atmosphaere",
           "Wahrnehmung",
           "Bildwirkung"
         ],
@@ -186,12 +187,12 @@
           "SR003",
           "SR005"
         ],
-        "target_outcome": "Räume emotional lesen und visuell gezielt nutzen können."
+        "target_outcome": "Raeume emotional lesen und visuell gezielt nutzen koennen."
       },
       {
         "scenario_id": "PS005",
-        "scenario_name": "Technik fällt während des Shootings aus",
-        "situation": "Kamera, Licht oder Datensysteme versagen während einer laufenden Produktion.",
+        "scenario_name": "Technik faellt waehrend des Shootings aus",
+        "situation": "Kamera, Licht oder Datensysteme versagen waehrend einer laufenden Produktion.",
         "primary_risks": [
           "Panik",
           "Produktionsabbruch",
@@ -237,12 +238,12 @@
       {
         "scenario_id": "PS006",
         "scenario_name": "Travel Produktion mit instabiler Logistik",
-        "situation": "Verspätungen, fehlendes Equipment oder Reiseprobleme destabilisieren die Produktion.",
+        "situation": "Verspaetungen, fehlendes Equipment oder Reiseprobleme destabilisieren die Produktion.",
         "primary_risks": [
           "Chaos",
           "Stress",
           "fehlende Planung",
-          "Überforderung"
+          "Ueberforderung"
         ],
         "emotional_dynamics": [
           "Unsicherheit",
@@ -251,14 +252,14 @@
         ],
         "required_professional_skills": [
           "Logistikdenken",
-          "Flexibilität",
+          "Flexibilitaet",
           "Ruhe",
           "Produktionskontrolle"
         ],
         "connected_concepts": [
           "Travel",
           "Struktur",
-          "Anpassungsfähigkeit",
+          "Anpassungsfaehigkeit",
           "Sicherheit"
         ],
         "connected_clusters": [
@@ -278,32 +279,32 @@
           "SR004",
           "SR008"
         ],
-        "target_outcome": "Auch unterwegs professionelle Stabilität bewahren."
+        "target_outcome": "Auch unterwegs professionelle Stabilitaet bewahren."
       },
       {
         "scenario_id": "PS007",
-        "scenario_name": "Kunde zweifelt während der Produktion",
-        "situation": "Der Kunde verliert Vertrauen oder wirkt nervös während eines Shootings.",
+        "scenario_name": "Kunde zweifelt waehrend der Produktion",
+        "situation": "Der Kunde verliert Vertrauen oder wirkt nervoes waehrend eines Shootings.",
         "primary_risks": [
           "Vertrauensverlust",
-          "negative Atmosphäre",
+          "negative Atmosphaere",
           "Unsicherheit im Team"
         ],
         "emotional_dynamics": [
           "Anspannung",
           "Druck",
-          "emotionale Instabilität"
+          "emotionale Instabilitaet"
         ],
         "required_professional_skills": [
           "Kommunikation",
-          "Präsenz",
+          "Praesenz",
           "Ruhe",
           "Leadership"
         ],
         "connected_concepts": [
           "Vertrauen",
-          "Professionalität",
-          "Atmosphäre",
+          "Professionalitaet",
+          "Atmosphaere",
           "Kontrolle"
         ],
         "connected_clusters": [
@@ -313,8 +314,7 @@
         ],
         "recommended_articles": [
           "T12_L14",
-          "T06_L04",
-          "T14_L01"
+          "T06_L04"
         ],
         "recommended_learning_paths": [
           "LP002",

@@ -3,15 +3,17 @@
     "name": "Photoguide – OnLocation",
     "brand": "ProPhotoSkills",
     "domain": "https://onlocation.prophotoskills.com",
-    "version": "1.0",
     "language": "de",
-    "type": "Professional OnLocation Production System",
+    "version": "1.2",
+    "last_updated": "2026-09-27",
+    "file_role": "Einstieg & Identitaet",
+    "type": "Photoguide – OnLocation – 4 Module, 61 Artikel (Teil von ProPhotoSkills)",
     "subtype": "Travel, Location, Insurance, Equipment – Mobile Production Framework",
     "status": "active",
     "positioning": {
-      "core_statement": "OnLocation bedeutet professionelle Kreativität unter wechselnden realen Bedingungen.",
-      "master_thesis": "Professionelle OnLocation Produktionen entstehen aus Vorbereitung, Logistik, Belastbarkeit, Raumwahrnehmung und Produktionssicherheit.",
-      "secondary_thesis": "Kreativität braucht Stabilität – auch und besonders unterwegs.",
+      "core_statement": "Fotografie beginnt nicht mit der Kamera. Sie beginnt im Kopf.",
+      "master_thesis": "Professionelle Fotografie ist ein Zusammenspiel aus Wahrnehmung, Fuehrung, Struktur, Belastbarkeit, Kommunikation und visueller Wirkung.",
+      "secondary_thesis": "4 Module in einem Photoguide: TRAVEL, LOCATION, INSURANCE, EQUIPMENT.",
       "identity": [
         "Mobile Production System",
         "Creative Stability Framework",
@@ -31,11 +33,11 @@
     "core_principles": [
       "Technik bedeutet nicht Kamera. Technik bedeutet dich.",
       "Der Fotograf ist Regisseur.",
-      "Menschenführung beeinflusst Bildwirkung.",
+      "Menschenfuehrung beeinflusst Bildwirkung.",
       "Vorbereitung erzeugt kreative Freiheit.",
-      "Atmosphäre wird sichtbar im Bild.",
+      "Atmosphaere wird sichtbar im Bild.",
       "Professionelle Ruhe ist eine Form von Technik.",
-      "Kreativität braucht Struktur.",
+      "Kreativitaet braucht Struktur.",
       "Professionelle Produktionen bestehen aus unsichtbarer Arbeit.",
       "Licht erzeugt Emotion.",
       "Bildwirkung beginnt mit Wahrnehmung."
@@ -49,31 +51,25 @@
         "core_topics": [
           "Logistik",
           "Reiseplanung",
-          "Jetlag",
-          "Equipment Transport",
-          "Zoll",
-          "Visum",
-          "Travel Management",
-          "On-Location"
+          "OnLocation",
+          "Flexibilitaet"
         ],
-        "semantic_role": "Kreativitätsschutz durch Planung"
+        "semantic_role": "Kreativitaetsschutz durch Planung",
+        "url": "https://prophotoskills.com/travel/"
       },
       {
         "id": "LOCATION",
         "code": "T11",
-        "meaning": "Räume, Atmosphäre und visuelle Wirkung",
+        "meaning": "Raeume, Atmosphaere und visuelle Wirkung",
         "purpose": "Locations als aktiven Teil der Bildwirkung verstehen",
         "core_topics": [
           "Scouting",
-          "Licht",
-          "Atmosphäre",
+          "Atmosphaere",
           "Raumwirkung",
-          "Produktion",
-          "Emotion",
-          "Bildsprache",
-          "Wahrnehmung"
+          "Bildsprache"
         ],
-        "semantic_role": "Der Raum als Co-Regisseur"
+        "semantic_role": "Der Raum als Co-Regisseur",
+        "url": "https://prophotoskills.com/location/"
       },
       {
         "id": "INSURANCE",
@@ -81,33 +77,27 @@
         "meaning": "Sicherheit, Verantwortung und Risikomanagement",
         "purpose": "Professionelle Produktionen absichern",
         "core_topics": [
-          "Nutzungsrechte",
-          "Verträge",
+          "Vertraege",
           "Backups",
-          "Haftung",
-          "Plan B",
           "Krisenmanagement",
-          "Datensicherheit",
-          "Reputation"
+          "Datensicherheit"
         ],
-        "semantic_role": "Sicherheit erzeugt kreative Freiheit"
+        "semantic_role": "Sicherheit erzeugt kreative Freiheit",
+        "url": "https://prophotoskills.com/insurance/"
       },
       {
         "id": "EQUIPMENT",
         "code": "T13",
         "meaning": "Werkzeugstrategie statt Gear-Fixierung",
-        "purpose": "Equipment als Werkzeug und nicht als Identität verstehen",
+        "purpose": "Equipment als Werkzeug und nicht als Identitaet verstehen",
         "core_topics": [
           "Kameras",
-          "Objektive",
-          "Rental",
           "Workflow",
           "Minimalismus",
-          "Lichttechnik",
-          "Organisation",
           "Produktionssicherheit"
         ],
-        "semantic_role": "Werkzeuge dienen der Wirkung"
+        "semantic_role": "Werkzeuge dienen der Wirkung",
+        "url": "https://prophotoskills.com/equipment/"
       }
     ],
     "entity_system": {
@@ -116,12 +106,12 @@
         "Produktion",
         "Menschen",
         "Licht",
-        "Atmosphäre",
+        "Atmosphaere",
         "Kommunikation",
         "Wahrnehmung",
         "Belastbarkeit",
         "Verantwortung",
-        "Kreativität"
+        "Kreativitaet"
       ],
       "secondary_entities": [
         "Location",
@@ -141,34 +131,19 @@
         {
           "from": "TRAVEL",
           "to": "LOCATION",
-          "relation": "Logistik schützt kreative Möglichkeiten"
+          "relation": "Logistik schuetzt kreative Moeglichkeiten"
         }
       ],
       "nextlevel_crosslinks": [
         {
-          "from": "KNOWLEDGE",
-          "to": "TECHNIK",
-          "relation": "Wissen erzeugt professionelle Ruhe"
-        },
-        {
-          "from": "TECHNIK",
-          "to": "PSYCHO",
-          "relation": "Mentale Stabilität beeinflusst Menschenführung"
-        },
-        {
-          "from": "PSYCHO",
-          "to": "SKILL",
-          "relation": "Kommunikation verbessert kreative Zusammenarbeit"
-        },
-        {
           "from": "INSURANCE",
           "to": "PROGRESS",
-          "relation": "Sicherheit ermöglicht professionelles Wachstum"
+          "relation": "Sicherheit ermoeglicht professionelles Wachstum"
         },
         {
           "from": "EQUIPMENT",
           "to": "PROGRESS",
-          "relation": "Werkzeuge unterstützen Ergebnisse"
+          "relation": "Werkzeuge unterstuetzen Ergebnisse"
         }
       ]
     },
@@ -196,51 +171,83 @@
           "zitiercode"
         ]
       },
-      "citation_standard": "— Eric P., ProPhotoSkills, {MODULE}, {CODE} (2026)",
+      "citation_standard": "- Eric P., ProPhotoSkills, {MODULE}, {CODE} (2026)",
       "url_logic": {
         "format": "/tXX_lYY_slug/",
         "meaning": {
           "TXX": "Modul",
           "LYY": "Lernartikel",
           "EYY": "Essay"
-        }
+        },
+        "access": "Artikel-URLs (/tXX_lYY_slug/) fuehren auf eine Hinweisseite mit Login. Der Volltext ist nach dem Kauf im Mitgliederbereich lesbar."
       }
     },
     "ai_ecosystem": {
-      "purpose": "Maschinenlesbare Wissensstruktur für KI-Systeme, semantische Suche und interne Logik",
+      "purpose": "Maschinenlesbare Wissensstruktur fuer KI-Systeme, semantische Suche und interne Logik",
       "compatible_future_files": [
+        "site.json",
+        "master-system.json",
         "ai-index.json",
         "unified-index.json",
-        "topic-cluster.json",
+        "identity-core.json",
+        "citation-index.json",
+        "onlocation-system.json",
+        "knowledge.json",
+        "technik.json",
+        "progress.json",
+        "skill.json",
+        "psycho.json",
+        "travel.json",
+        "location.json",
+        "insurance.json",
+        "equipment.json",
         "authority-map.json",
         "ai-authority-map.json",
+        "topic-cluster.json",
         "cross-article-map.json",
-        "cross-combination-map.json",
         "cross-link-map.json",
-        "page-map.json",
-        "semantic-routing-map.json",
         "relationship-map.json",
-        "homepage-curation.json",
-        "module-index.json",
-        "citation-index.json",
+        "semantic-concept-map.json",
         "keyword-entity-map.json",
-        "visual-language-map.json",
-        "production-scenario-map.json",
-        "emotion-trigger-map.json",
         "learning-path-map.json",
+        "semantic-routing-map.json",
+        "page-map.json",
+        "homepage-curation.json",
+        "system-priority-matrix.json",
+        "adaptive-learning-core.json",
+        "ai-personality-map.json",
+        "behavior-adaptation-engine.json",
+        "cross-session-context-map.json",
+        "dynamic-recommendation-engine.json",
+        "emotion-trigger-map.json",
         "expertise-layer-map.json",
-        "onlocation-system.json"
+        "live-context-engine.json",
+        "live-feedback-loop.json",
+        "multi-agent-coordination-map.json",
+        "multi-user-dynamics-map.json",
+        "predictive-development-engine.json",
+        "production-scenario-map.json",
+        "user-state-history.json",
+        "visual-language-map.json",
+        "semantic-ai-operating-system.json",
+        "semantic-consciousness-layer.json",
+        "semantic-decision-engine.json",
+        "semantic-evolution-map.json",
+        "semantic-governance-map.json",
+        "semantic-memory-map.json",
+        "semantic-runtime-engine.json",
+        "semantic-runtime-memory.json",
+        "semantic-self-optimization.json"
       ],
       "brand_root": "https://prophotoskills.com",
       "sibling_products": [
         "https://nextlevel.prophotoskills.com",
-        "https://onlocation.prophotoskills.com",
         "https://memberabo.prophotoskills.com"
       ]
     },
     "platform_identity": {
       "what_it_is": [
-        "Professional Photography Thinking System",
+        "Mobile Production System",
         "Creative Leadership Framework",
         "Production Mindset Platform",
         "Visual Communication System"
@@ -252,46 +259,21 @@
         "Influencer Fotografie Plattform"
       ]
     },
-    "cross_system_links": {
-      "description": "Die folgenden 5 Kapitel gehören zum übergeordneten Photoguide – Next Level System auf prophotoskills.com. Sie ergänzen OnLocation semantisch und sind als externe Querverweise integriert.",
+    "brand_root": "https://prophotoskills.com",
+    "sibling_products": {
+      "nextlevel": "https://nextlevel.prophotoskills.com",
+      "memberabo": "https://memberabo.prophotoskills.com"
+    },
+    "product": {
+      "name": "Photoguide – OnLocation",
       "modules": [
-        {
-          "id": "KNOWLEDGE",
-          "url": "https://prophotoskills.com/knowledge/",
-          "system": "Photoguide – Next Level",
-          "semantic_role": "Strategisches Denken, Wahrnehmung, Licht, Vorbereitung"
-        },
-        {
-          "id": "TECHNIK",
-          "url": "https://prophotoskills.com/technik/",
-          "system": "Photoguide – Next Level",
-          "semantic_role": "Mentale Stärke, Präsenz, Belastbarkeit, Selbstoptimierung"
-        },
-        {
-          "id": "PROGRESS",
-          "url": "https://prophotoskills.com/progress/",
-          "system": "Photoguide – Next Level",
-          "semantic_role": "Professionalisierung, Strategie, Business, Wert"
-        },
-        {
-          "id": "SKILL",
-          "url": "https://prophotoskills.com/skill/",
-          "system": "Photoguide – Next Level",
-          "semantic_role": "Kreative Anwendung, Kommunikation, People-Fotografie"
-        },
-        {
-          "id": "PSYCHO",
-          "url": "https://prophotoskills.com/psycho/",
-          "system": "Photoguide – Next Level",
-          "semantic_role": "Vertrauen, Emotion, Menschenführung, Atmosphäre"
-        }
+        "TRAVEL",
+        "LOCATION",
+        "INSURANCE",
+        "EQUIPMENT"
       ],
-      "parent_brand": "https://prophotoskills.com",
-      "sibling_products": [
-        "https://nextlevel.prophotoskills.com",
-        "https://onlocation.prophotoskills.com",
-        "https://memberabo.prophotoskills.com"
-      ]
+      "price": "120 EUR",
+      "purchase_url": "https://www.digistore24.com/product/652061"
     }
   }
 }
