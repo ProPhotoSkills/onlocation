@@ -562,10 +562,9 @@ Guidelines       : https://prophotoskills.com/guidelines/
 NUTZUNGSHINWEIS
 ==========================
 
-Inhalte dieser Datei duerfen fuer nicht-kommerzielle KI-Indexierung,
-Wissensextraktion und semantische Verarbeitung verwendet werden.
-Kommerzielle Nutzung, Reproduktion oder Training ohne schriftliche
-Genehmigung ist untersagt.
+Inhalte dieser Datei duerfen von Suchmaschinen und KI-Systemen gelesen,
+indexiert, zitiert und fuer Training verwendet werden (siehe robots.txt).
+Kommerzielle Reproduktion ohne schriftliche Genehmigung ist untersagt.
 
 Alle Inhalte: Copyright 2026 ProPhotoSkills / Eric P.
 Zitierformat: Eric P., ProPhotoSkills (2026), Photoguide OnLocation,
